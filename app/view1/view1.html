@@ -1,0 +1,43 @@
+<div ng-app="myApp" ng-controller="myAppController">
+    <div class="container">
+        <h1 class="center-align">Hemliga Språket</h1>
+        <div class="col s10">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s10">
+                        <!--<i class="material-icons prefix" style="color:#78d649">check_circle</i>-->
+                        <textarea ng-change="fromReal()" ng-model="realLanguage" placeholder="Skriv in text..."
+                                  id="realLanguage"
+                                  type="text" class="validate"></textarea>
+                        <label for="realLanguage" class="active">Vanligt</label>
+                    </div>
+                    <!--<div style="height:75px" class="valign-wrapper">-->
+                        <!--<button class="btn col s12 whiteborder dark-05 solid"-->
+                                <!--ngclipboard data-clipboard-target="#realLanguage"-->
+                                <!--ng-click="showToolTip()">-->
+                            <!--<i class="material-icons prefix">content_copy</i></button>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                </div>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <!--<i class="material-icons prefix" style="color:#78d649">check_circle</i>-->
+                        <textarea ng-change="fromSecret()" ng-model="secretLanguage" placeholder="Tlsjw jo ufyu..."
+                                  id="secretLanguage"
+                                  type="text" class="validate"></textarea>
+                        <label for="secretLanguage" class="active">Hemliga Språket</label>
+
+                    </div>
+                    <div style="height:75px" class="valign-wrapper">
+                        <a class="btn col s12 whiteborder dark-05 solid"
+                           id="lowerButton"
+                           ngclipboard data-clipboard-target="#secretLanguage"
+                           ng-click="showToolTip()">
+                            <i class="material-icons prefix">content_copy</i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hemliga Språket</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Comfortaa|Raleway:100" rel="stylesheet">
+
+    <link rel="stylesheet" href="used_node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="used_node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="used_node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+
+    <script src="used_node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script src="used_node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="view1/view1.js"></script>
+    <script src="view2/view2.js"></script>
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container"><a href="#" class="brand-logo">Hemliga Språket</a>
+                <ul id="nav-desktop" class="right hide-on-med-and-down">
+                    <li><a href="#!/view1">Översätt</a></li>
+                    <li><a href="#!/view2">Om</a></li>
+                </ul>
+                <a class='dropdown-button btn right hide-on-large-only' href='#' data-activates='dropdown1'>
+                    <i class="material-icons prefix">menu</i>
+                </a>
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!/view1">Översätt</a></li>
+                    <li><a href="#!/view2">Om</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div ng-view></div>
+    <div class="backgroundHolder"></div>
+</main>
+<footer class="page-footer">
+    <div class="container">© 2017 Memo Förlag, All rights reserved.</div>
+</footer>
+</body>
+</html>

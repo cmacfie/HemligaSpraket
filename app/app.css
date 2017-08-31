@@ -1,0 +1,171 @@
+/* app css stylesheet */
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #393939;
+}
+
+nav {
+  background-color: rgba(201,48,42,1);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color:white;
+}
+
+input {
+  color:white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-footer{
+  padding: 20px 0 20px 0;
+  background-color: rgba(201,48,42,1);
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 9vw;
+}
+
+.brand-logo {
+  font-family: 'Chewy', cursive;
+  font-size: 6vw !important;
+}
+
+textarea {
+  resize:none;
+  color:white;
+  height: 75px;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #9e9e9e;
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+
+.btn:focus {
+  background-color:rgba(0,0,0,0.05);
+}
+
+.btn:hover {
+  background-color:rgba(0,0,0,0.1);
+}
+
+
+.dark-05 {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.dark-20 {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.dark-50 {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.clear {
+  background: transparent;
+}
+
+.my-wrapper{
+  height:100%;
+}
+
+.whiteborder {
+  border: 1px;
+  border-color: white;
+  border-style:solid;
+}
+
+.dashed {
+  border-style: dashed;
+}
+
+.solid {
+  box-shadow: 0 0 0 #fff !important;
+}
+
+::selection{
+  background-color:transparent;
+}
+
+.toast {
+  background-color:rgba(0,0,0,0.7);
+  border: 1px;
+  border-color: white;
+  border-style:dashed;
+}
+
+.dropdown-button{
+  padding: 0 7px 0 7px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.dropdown-button i{
+  font-size: 1.3rem !important;
+  line-height: inherit !important;
+}
+
+.dropdown-content li > a{
+  color: rgba(201,48,42,1);
+}
+
+@media screen and (min-width: 470px){
+  h1 {
+    font-size: 50px;
+  }
+  .brand-logo {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 470px){
+
+}
+
+/*.menu {*/
+  /*list-style: none;*/
+  /*border-bottom: 0.1em solid black;*/
+  /*margin-bottom: 2em;*/
+  /*padding: 0 0 0.5em;*/
+/*}*/
+
+/*.menu:before {*/
+  /*content: "[";*/
+/*}*/
+
+/*.menu:after {*/
+  /*content: "]";*/
+/*}*/
+
+/*.menu > li {*/
+  /*display: inline;*/
+/*}*/
+
+/*.menu > li + li:before {*/
+  /*content: "|";*/
+  /*padding-right: 0.3em;*/
+/*}*/
