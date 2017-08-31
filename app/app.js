@@ -1,5 +1,4 @@
 'use strict';
-
 // Declare app level module which depends on views, and components
 
 var myApp = angular.module('myApp', [
@@ -16,9 +15,16 @@ myApp.controller('myAppController', function ($scope) {
     $scope.secretLanguage;
     $scope.realLanguage;
 
+    var normalImagePath = "img/MoaAndMans_original.png";
+    var mansWink = "img/MoaAndMans_MansWink.png";
+    var moaWink = "img/MoaAndMans_MoaWink.png";
+    var bothWink = "img/MoaAndMans_BothWink.png";
+
 
     var bigAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ';
     var smallAlphabet = 'abcdefghijklmnopqrstuvwxyzåäö';
+
+    // blinkImage();
 
     $scope.fromSecret = function(){
         $scope.realLanguage = translateFromSecretLanguage($scope.secretLanguage);
@@ -55,6 +61,50 @@ myApp.controller('myAppController', function ($scope) {
         }
         Materialize.toast('Kopierad!', 1500);
     };
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    //------------CSS SETTINGS -----------------------------------------------------
+
+    var newSize = $(window).width() > $(window).height ? $(window).width()/3 : $(window).height() /3;
+    $('.imageHolder').css({'width':newSize, 'height':newSize});
+
+    sleep(1200).then(function(){
+        blinkMansImage();
+    });
+    sleep(2300).then(function(){
+        blinkMoaImage();
+    });
+
+    function blinkMansImage(){
+        return new Promise(function(resolve, reject) {
+            $('#mansWink').attr('src', mansWink);
+            sleep(150).then(function(){
+                $('#mansWink').attr('src', "");
+                resolve();
+            });
+            var pauseTime = Math.floor(1000 * Math.random()*10 + 3000);
+            sleep(pauseTime).then(function(){
+               blinkMansImage();
+            });
+        });
+    }
+
+    function blinkMoaImage(){
+        return new Promise(function(resolve, reject) {
+            $('#moaWink').attr('src', moaWink);
+            sleep(150).then(function(){
+                $('#moaWink').attr('src', "");
+                resolve();
+            });
+            var pauseTime = Math.floor(1000 * Math.random()*10 + 3000);
+            sleep(pauseTime).then(function(){
+                blinkMoaImage();
+            });
+        });
+    }
 
 
     function translateFromSecretLanguage(textString){
